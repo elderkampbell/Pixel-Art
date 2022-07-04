@@ -1,0 +1,55 @@
+h1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#color-palette{
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.color{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+#black{
+    background-color: black;
+}
+
+#red{
+    background-color: red;
+}
+#green{
+    background-color: green;
+}
+#blue{
+    background-color: blue;
+}
+
+#pixel-board{
+    width: 230px;
+    height: 230px;
+    display: block;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pixel{
+    background-color: white;
+/* border-collapse: collapse; */
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.selected{
+}
