@@ -1,39 +1,57 @@
-h1{
+h1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 
-#color-palette{
+#color-palette {
     width: fit-content;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.color{
+.color {
     width: 50px;
     height: 50px;
     border: 1px solid black;
     display: inline-block;
 }
 
-#black{
+.black {
     background-color: black;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
 }
 
-#red{
+.red {
     background-color: red;
-}
-#green{
-    background-color: green;
-}
-#blue{
-    background-color: blue;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
 }
 
-#pixel-board{
+.green {
+    background-color: green;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.blue {
+    background-color: blue;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+#pixel-board {
     width: 230px;
     height: 230px;
     display: block;
@@ -42,14 +60,11 @@ h1{
     margin-right: auto;
 }
 
-.pixel{
+.pixel {
     background-color: white;
-/* border-collapse: collapse; */
     width: 40px;
     height: 40px;
     border: 1px solid black;
     display: inline-block;
 }
 
-.selected{
-}

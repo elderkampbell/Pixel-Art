@@ -1,26 +1,54 @@
-const preto = document.getElementById(black);
-const vermelho = document.getElementById(red);
-const verde = document.getElementById(green);
-const azul = document.getElementById(blue);
+const preto = document.getElementsByClassName('black');
+const vermelho = document.getElementsByClassName('red');
+const verde = document.getElementsByClassName('green');
+const azul = document.getElementsByClassName('blue');
+const colorSelected = document.querySelectorAll('.color');
 
-let corSelecionada = 'cor';
+colorSelected[0].classList.add('selected')
 
-black.addEventListener('click', function () {
-  corSelecionada = 'black';
-  console.log (corSelecionada)
-});
+function listener() {
+    for (let i = 0; i < 4; i += 1) {
+        colorSelected[i].addEventListener('click', changeClass)
+    }
+}
 
-red.addEventListener('click', function () {
-  corSelecionada = 'red';
-  console.log (corSelecionada)
-});
+function changeClass(click) {
+    for (let i = 0; i < 4; i += 1) {
+        colorSelected[i].classList.remove('selected');
+    }
+    click.target.classList.add('selected');
+} listener();
 
-green.addEventListener('click', function () {
-  corSelecionada = 'green';
-  console.log (corSelecionada)
-});
+function pixelBoard() {
+    let pixelBoard = document.getElementById('pixel-board');
 
-blue.addEventListener('click', function () {
-  corSelecionada = 'blue';
-  console.log (corSelecionada)
-});
+    for (let i = 0; i < 25; i += 1) {
+        let createdDiv = document.createElement('div');
+        createdDiv.classList.add('pixel')
+        pixelBoard.appendChild(createdDiv);
+
+    };
+} pixelBoard();
+
+function paleta() {
+    let currentColor = document.getElementsByClassName('color')
+    currentColor[0].style.backgroundColor = 'black'
+    currentColor[1].style.backgroundColor = 'red'
+    currentColor[2].style.backgroundColor = 'green'
+    currentColor[3].style.backgroundColor = 'blue'
+} paleta();
+
+function paint() {
+    let div = document.querySelectorAll('.pixel');
+    let bg = ['black']
+    for (let i = 0; i < colorSelected.length; i += 1) {
+        colorSelected[i].addEventListener('click', function () {
+            bg = colorSelected[i].style.backgroundColor
+        })
+    }
+    for (let i = 0; i < div.length; i += 1) {
+        div[i].addEventListener('click', function(){
+            div[i].style.backgroundColor = bg;
+        });
+    }
+} paint();
